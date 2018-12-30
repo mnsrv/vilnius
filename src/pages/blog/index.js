@@ -4,8 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../../components/layout'
 
 export default ({ data }) => (
-  <Layout>
-    <h1>Блог</h1>
+  <Layout title="Блог">
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <li key={node.id}>
