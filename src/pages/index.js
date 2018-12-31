@@ -9,9 +9,9 @@ export default ({ data }) => {
   const sign = temperature > 0 ? '+' : ''
 
   return (
-    <Layout title="mansurov.me">
+    <Layout title="Саша Мансуров">
       <div style={{ backgroundColor: 'rgb(25,28,38)', color: 'white', padding: '1rem 1.5rem', borderRadius: 8, display: 'inline-block', maxWidth: '100%' }}>
-        <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{getRussianCity(location)} {getEmoji(icon)}</div>
+        <div style={{ fontSize: '1.5rem' }}>{getRussianCity(location)} {getEmoji(icon)}</div>
         <div style={{ fontSize: '3rem', fontWeight: '200', textAlign: 'center' }}>{sign}{temperature}°</div>
       </div>
     </Layout>

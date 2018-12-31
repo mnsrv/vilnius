@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 const ListLink = props => (
   <li style={{ display: 'inline-block', marginRight: '1rem' }}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link to={props.to} className={props.className}>{props.children}</Link>
   </li>
 )
 
@@ -13,7 +13,7 @@ export default ({ title, children }) => (
     <Helmet defaultTitle="mansurov.me" title={title} />
     <header>
       <ul style={{ listStyle: 'none', marginLeft: 0 }}>
-        <ListLink to="/">mansurov.me</ListLink>
+        <ListLink to="/" className="home_link">⚫️</ListLink>
         <ListLink to="/blog">Блог</ListLink>
       </ul>
     </header>

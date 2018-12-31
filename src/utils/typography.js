@@ -24,6 +24,9 @@ const themeVilnius = {
     'a:hover,a:active': {
       boxShadow: '0 1px 0 0 currentColor',
     },
+    '.home_link:hover,.home_link:active': {
+      boxShadow: 'none'
+    }
   })
 }
 
