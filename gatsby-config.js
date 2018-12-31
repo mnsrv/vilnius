@@ -1,7 +1,7 @@
 require("dotenv").config({
   path: '.env',
 })
-console.log(JSON.stringify(process.env))
+
 module.exports = {
   plugins: [
     {
