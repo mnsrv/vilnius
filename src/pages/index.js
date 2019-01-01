@@ -4,16 +4,25 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { getEmoji, getRussianCity } from '../utils/weather'
 
-export default ({ data }) => {
-  const { temperature, icon, location } = data.weather.weatherByCity
+const WeatherBlock = ({ weather }) => {
+  if (!weather) {
+    return null
+  }
+  const { temperature, icon, location } = weather
   const sign = temperature > 0 ? '+' : ''
 
   return (
+    <div style={{ backgroundColor: 'rgb(25,28,38)', color: 'white', padding: '1rem 1.5rem', borderRadius: 8, display: 'inline-block', maxWidth: '100%' }}>
+      <div style={{ fontSize: '1.5rem' }}>{getRussianCity(location)} {getEmoji(icon)}</div>
+      <div style={{ fontSize: '3rem', fontWeight: '200', textAlign: 'center' }}>{sign}{temperature}°</div>
+    </div>
+  )
+}
+
+export default ({ data }) => {
+  return (
     <Layout title="Саша Мансуров">
-      <div style={{ backgroundColor: 'rgb(25,28,38)', color: 'white', padding: '1rem 1.5rem', borderRadius: 8, display: 'inline-block', maxWidth: '100%' }}>
-        <div style={{ fontSize: '1.5rem' }}>{getRussianCity(location)} {getEmoji(icon)}</div>
-        <div style={{ fontSize: '3rem', fontWeight: '200', textAlign: 'center' }}>{sign}{temperature}°</div>
-      </div>
+      <WeatherBlock weather={data.weather.weatherByCity} />
     </Layout>
   )
 }

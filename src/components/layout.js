@@ -13,7 +13,7 @@ export default ({ title, children }) => (
     <Helmet defaultTitle="mansurov.me" title={title} />
     <header>
       <ul style={{ listStyle: 'none', marginLeft: 0 }}>
-        <ListLink to="/" className="home_link">⚫️</ListLink>
+        <ListLink to="/" className="home_link"><span role="img" aria-label="black-dot">⚫️</span></ListLink>
         <ListLink to="/blog">Блог</ListLink>
       </ul>
     </header>
