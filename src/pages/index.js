@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { getEmoji, getRussianCity } from '../utils/weather'
 
-const WeatherBlock = ({ weather }) => {
+const Weather = ({ weather }) => {
   if (!weather) {
     return null
   }
@@ -18,18 +18,28 @@ const WeatherBlock = ({ weather }) => {
   const minutes = String(date.getMinutes()).padStart(2, '0')
 
   return (
-    <div style={{ backgroundColor: 'rgb(25,28,38)', color: 'white', padding: '1rem 1.5rem', borderRadius: 8, display: 'inline-block', maxWidth: '100%' }}>
+    <div style={{ backgroundColor: 'rgb(25,28,38)', color: 'white', padding: '1rem 1.5rem', borderRadius: 8, display: 'inline-block', maxWidth: '100%', marginBottom: '1.45rem' }}>
       <h4 style={{ fontSize: '1.5rem' }}>{getRussianCity(location)} {getEmoji(icon)}</h4>
       <h4 style={{ fontSize: '3rem', fontWeight: '200', textAlign: 'center' }}>{sign}{temperature}°</h4>
       <small>{day}/{month}/{year} {hours}:{minutes}</small>
     </div>
   )
 }
+const Social = () => (
+  <p>
+    <a href="https://twitter.com/sashamjolnir" target="_blank">Twitter</a>
+    {' · '}
+    <a href="https://www.instagram.com/mnsrv/" target="_blank">Instagram</a>
+    {' · '}
+    <a href="https://letterboxd.com/mansurov/films/diary/" target="_blank">Letterboxd</a>
+  </p>
+)
 
 export default ({ data }) => {
   return (
     <Layout title="Саша Мансуров">
-      <WeatherBlock weather={data.weather.weatherByCity} />
+      <Weather weather={data.weather.weatherByCity} />
+      <Social />
     </Layout>
   )
 }
