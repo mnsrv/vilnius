@@ -4,7 +4,11 @@ import { Link } from 'gatsby'
 
 const ListLink = props => (
   <li style={{ display: 'inline-block', marginRight: '1rem' }}>
-    <Link to={props.to} className={props.className}>{props.children}</Link>
+    <h4>
+      <Link to={props.to} className={props.className}>
+        {props.children}
+      </Link>
+    </h4>
   </li>
 )
 

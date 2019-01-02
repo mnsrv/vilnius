@@ -13,8 +13,8 @@ const WeatherBlock = ({ weather }) => {
 
   return (
     <div style={{ backgroundColor: 'rgb(25,28,38)', color: 'white', padding: '1rem 1.5rem', borderRadius: 8, display: 'inline-block', maxWidth: '100%' }}>
-      <div style={{ fontSize: '1.5rem' }}>{getRussianCity(location)} {getEmoji(icon)}</div>
-      <div style={{ fontSize: '3rem', fontWeight: '200', textAlign: 'center' }}>{sign}{temperature}°</div>
+      <h4 style={{ fontSize: '1.5rem' }}>{getRussianCity(location)} {getEmoji(icon)}</h4>
+      <h4 style={{ fontSize: '3rem', fontWeight: '200', textAlign: 'center' }}>{sign}{temperature}°</h4>
     </div>
   )
 }

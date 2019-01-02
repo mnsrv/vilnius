@@ -1,24 +1,10 @@
 import Typography from 'typography'
 
-const fontFamily = [
-  '-apple-system',
-  'BlinkMacSystemFont',
-  'Segoe UI',
-  'Roboto',
-  'Helvetica',
-  'Arial',
-  'sans-serif',
-  'Apple Color Emoji',
-  'Segoe UI Emoji',
-  'Segoe UI Symbol',
-]
 const themeVilnius = {
   baseFontSize: '18px',
-  headerFontFamily: fontFamily,
-  bodyFontFamily: fontFamily,
+  bodyColor: 'black',
   overrideStyles: () => ({
     a: {
-      color: 'hsl(230,55%,58%)',
       textDecoration: 'none',
     },
     'a:hover,a:active': {
@@ -26,6 +12,11 @@ const themeVilnius = {
     },
     '.home_link:hover,.home_link:active': {
       boxShadow: 'none'
+    },
+    h4: {
+      fontWeight: 'normal',
+      lineHeight: 1.45,
+      margin: 0
     }
   })
 }
