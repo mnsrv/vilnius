@@ -17,6 +17,9 @@ const themeVilnius = {
       fontWeight: 'normal',
       lineHeight: 1.45,
       margin: 0
+    },
+    'p + ol, p + ul': {
+      marginTop: '-1rem'
     }
   })
 }
