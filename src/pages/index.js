@@ -27,11 +27,11 @@ const Weather = ({ weather }) => {
 }
 const Social = () => (
   <p>
-    <a href="https://twitter.com/sashamjolnir" target="_blank">Twitter</a>
+    <a href="https://twitter.com/sashamjolnir" target="_blank" rel="noopener noreferrer">Twitter</a>
     {' · '}
-    <a href="https://www.instagram.com/mnsrv/" target="_blank">Instagram</a>
+    <a href="https://www.instagram.com/mnsrv/" target="_blank" rel="noopener noreferrer">Instagram</a>
     {' · '}
-    <a href="https://letterboxd.com/mansurov/films/diary/" target="_blank">Letterboxd</a>
+    <a href="https://letterboxd.com/mansurov/films/diary/" target="_blank" rel="noopener noreferrer">Letterboxd</a>
   </p>
 )
 
