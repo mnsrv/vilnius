@@ -14,7 +14,7 @@ const Social = () => (
 
 export default ({ data }) => {
   return (
-    <Layout title="Саша Мансуров">
+    <Layout title="Саша Мансуров" index>
       <Social />
     </Layout>
   )

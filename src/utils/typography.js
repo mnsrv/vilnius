@@ -7,11 +7,14 @@ const themeVilnius = {
     a: {
       textDecoration: 'none',
     },
-    'a:hover,a:active': {
-      boxShadow: '0 1px 0 0 currentColor',
+    '.container': {
+      marginTop: 0,
+      maxWidth: '650px'
     },
-    '.home_link:hover,.home_link:active': {
-      boxShadow: 'none'
+    "@media only screen and (min-width:650px)": {
+      ".container": {
+        margin: '1rem auto',
+      },
     },
     h4: {
       fontWeight: 'normal',
@@ -20,6 +23,32 @@ const themeVilnius = {
     },
     'p + ol, p + ul': {
       marginTop: '-1rem'
+    },
+    'main': {
+      padding: '0 1rem',
+      marginBottom: '1.45rem'
+    },
+    'header': {
+      backgroundColor: '#FB090B',
+      padding: '1rem',
+      marginBottom: '1.45rem'
+    },
+    'header ul': {
+      marginBottom: 0
+    },
+    'header li': {
+      marginBottom: 0
+    },
+    'header a': {
+      color: 'black'
+    },
+    'header a.active': {
+      color: 'white'
+    },
+    'blockquote': {
+      borderLeft: '0.25rem solid #ccc',
+      marginLeft: 0,
+      paddingLeft: '1.45rem'
     }
   })
 }
