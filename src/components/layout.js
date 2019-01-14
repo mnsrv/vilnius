@@ -14,7 +14,11 @@ const ListLink = props => (
 
 export default ({ title, children }) => (
   <div style={{ margin: '1rem auto', maxWidth: 650, padding: '0 1rem' }}>
-    <Helmet defaultTitle="mansurov.me" title={title} />
+    <Helmet
+      defaultTitle="mansurov.me"
+      title={title}
+      htmlAttributes={{ lang: 'ru' }}
+    />
     <header>
       <ul style={{ listStyle: 'none', marginLeft: 0 }}>
         <ListLink to="/" className="home_link"><span role="img" aria-label="black-dot">⚫️</span></ListLink>
