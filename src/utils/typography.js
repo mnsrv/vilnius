@@ -4,7 +4,7 @@ const themeVilnius = {
   baseFontSize: '18px',
   bodyColor: 'black',
   overrideStyles: () => ({
-    a: {
+    '.home_link': {
       textDecoration: 'none',
     },
     '.container': {
@@ -43,7 +43,9 @@ const themeVilnius = {
       color: 'black'
     },
     'header a.active': {
-      color: 'white'
+      color: 'white',
+      textDecoration: 'none',
+      cursor: 'default'
     },
     'blockquote': {
       borderLeft: '0.25rem solid #ccc',
