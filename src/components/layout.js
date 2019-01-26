@@ -29,6 +29,7 @@ export default ({ index = false, title, children }) => (
             : <span key="black-dot" role="img" aria-label="black-dot">⚫️</span>}
         </ListLink>
         <ListLink to="/blog">Блог</ListLink>
+        <ListLink to="/colors">Цвета</ListLink>
       </ul>
     </header>
     <main>
