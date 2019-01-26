@@ -9,7 +9,7 @@ export default () => {
   const progress = Math.floor((nowInMS - firstDayInMS) / (lastDayInMS - firstDayInMS) * 100)
 
   return (
-    <div style={{ position: 'relative', backgroundColor: '#eee' }} title={`Year Progress – ${progress}%`}>
+    <div style={{ position: 'relative', backgroundColor: '#eee' }} title={`2019 – ${progress}%`}>
       <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: `${progress}%`, backgroundColor: '#aaa' }} />
       <h6 style={{ margin: 0, paddingLeft: '1rem', position: 'relative' }}>{progress}%</h6>
     </div>

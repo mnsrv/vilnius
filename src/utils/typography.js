@@ -29,7 +29,7 @@ const themeVilnius = {
       marginBottom: '1.45rem'
     },
     'header': {
-      backgroundColor: '#FB090B',
+      backgroundColor: '#fcc',
       padding: '1rem',
       marginBottom: '1.45rem'
     },
