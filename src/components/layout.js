@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'gatsby'
+import YearProgress from './YearProgress'
 
 const ListLink = props => (
   <li style={{ display: 'inline-block', marginRight: '1rem' }}>
@@ -19,6 +20,7 @@ export default ({ index = false, title, children }) => (
       title={title}
       htmlAttributes={{ lang: 'ru' }}
     />
+    <YearProgress />
     <header>
       <ul style={{ listStyle: 'none', marginLeft: 0 }}>
         <ListLink to="/" className="home_link">
