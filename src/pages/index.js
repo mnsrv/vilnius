@@ -1,21 +1,10 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
+import Social from '../components/Social'
 
-const Social = () => (
-  <p>
-    <a href="https://twitter.com/sashamjolnir" target="_blank" rel="noopener noreferrer">Twitter</a>
-    {' · '}
-    <a href="https://www.instagram.com/mnsrv/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    {' · '}
-    <a href="https://letterboxd.com/mansurov/films/diary/" target="_blank" rel="noopener noreferrer">Letterboxd</a>
-  </p>
+export default () => (
+  <Layout title="Саша Мансуров" index>
+    <Social />
+  </Layout>
 )
-
-export default ({ data }) => {
-  return (
-    <Layout title="Саша Мансуров" index>
-      <Social />
-    </Layout>
-  )
-}
