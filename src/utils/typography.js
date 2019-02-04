@@ -11,10 +11,8 @@ const themeVilnius = {
       marginTop: 0,
       maxWidth: '650px'
     },
-    "@media only screen and (min-width:650px)": {
-      ".container": {
-        margin: '1rem auto',
-      },
+    '.container__full': {
+      marginTop: 0
     },
     h4: {
       fontWeight: 'normal',
@@ -29,6 +27,8 @@ const themeVilnius = {
       marginBottom: '1.45rem'
     },
     'header': {
+      maxWidth: '650px',
+      margin: '0 auto',
       backgroundColor: '#fcc',
       padding: '1rem',
       marginBottom: '1.45rem'
@@ -47,11 +47,37 @@ const themeVilnius = {
       textDecoration: 'none',
       cursor: 'default'
     },
+    '.year_progress': {
+      maxWidth: '650px',
+      margin: '0 auto',
+      position: 'relative',
+      backgroundColor: '#eee'
+    },
     'blockquote': {
       borderLeft: '0.25rem solid #ccc',
       marginLeft: 0,
       paddingLeft: '1.45rem'
-    }
+    },
+    '.image': {
+      display: 'block',
+      float: 'left',
+      width: '100%',
+      marginBottom: '1rem',
+      marginRight: '1rem'
+    },
+    "@media only screen and (min-width:650px)": {
+      ".container": {
+        margin: '1rem auto',
+      },
+      '.container__full': {
+        margin: '1rem auto',
+      },
+      '.image': {
+        width: 'auto',
+        minHeight: '200px',
+        maxHeight: '50vh'
+      }
+    },
   })
 }
 

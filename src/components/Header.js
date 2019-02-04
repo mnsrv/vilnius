@@ -20,6 +20,7 @@ export default ({ index = false }) => (
           : <span key="black-dot" role="img" aria-label="black-dot">⚫️</span>}
       </ListLink>
       <ListLink to="/blog">Блог</ListLink>
+      <ListLink to="/moodboard">Картинки</ListLink>
     </ul>
   </header>
 )
