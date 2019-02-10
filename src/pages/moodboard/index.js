@@ -6,7 +6,9 @@ import Layout from '../../components/Layout'
 export default ({ data }) => (
   <Layout title="Картинки" full>
     {data.allFile.edges.map(({ node }) => (
-      <img key={node.id} alt={node.name} src={node.publicURL} className="image" />
+      <a key={node.id} href={node.publicURL} target="_blank">
+        <img alt={node.name} src={node.publicURL} className="image" />
+      </a>
     ))}
   </Layout>
 )
