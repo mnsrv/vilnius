@@ -13,7 +13,10 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    allFile(filter: { extension: { eq: "jpg" } }) {
+    allFile(
+      filter: { extension: { eq: "jpg" }},
+      sort: { fields: [birthTime], order: DESC }
+    ) {
       edges {
         node {
           id
