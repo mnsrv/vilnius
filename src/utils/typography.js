@@ -4,15 +4,17 @@ const themeVilnius = {
   baseFontSize: '18px',
   bodyColor: 'black',
   overrideStyles: () => ({
+    'body': {
+      backgroundColor: '#f6f7f8'
+    },
     '.home_link': {
       textDecoration: 'none',
     },
     '.container': {
-      marginTop: 0,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      padding: '0 1rem',
       maxWidth: '650px'
-    },
-    '.container__full': {
-      marginTop: 0
     },
     h4: {
       fontWeight: 'normal',
@@ -24,16 +26,15 @@ const themeVilnius = {
     },
     'main': {
       padding: '0 1rem',
-      marginBottom: '1.45rem'
+      marginBottom: '3rem'
     },
     'header': {
-      maxWidth: '650px',
-      margin: '0 auto',
-      backgroundColor: '#fcc',
-      padding: '1rem',
-      marginBottom: '1.45rem'
+      padding: '1rem 0',
+      borderBottom: '1px solid rgb(219,219,219)',
+      marginBottom: '1.5rem'
     },
     'header ul': {
+      listStyle: 'none',
       marginBottom: 0
     },
     'header li': {
@@ -43,7 +44,6 @@ const themeVilnius = {
       color: 'black'
     },
     'header a.active': {
-      color: 'white',
       textDecoration: 'none',
       cursor: 'default'
     },
@@ -66,12 +66,6 @@ const themeVilnius = {
       marginRight: '1rem'
     },
     "@media only screen and (min-width:650px)": {
-      ".container": {
-        margin: '1rem auto',
-      },
-      '.container__full': {
-        margin: '1rem auto',
-      },
       '.image': {
         width: 'auto',
         minHeight: '200px',

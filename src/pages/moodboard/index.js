@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 
 export default ({ data }) => (
-  <Layout title="Картинки" full>
+  <Layout title="Картинки">
     {data.allFile.edges.map(({ node }) => (
       <a key={node.id} href={node.publicURL} target="_blank">
         <img alt={node.name} src={node.publicURL} className="image" />

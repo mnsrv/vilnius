@@ -13,7 +13,7 @@ const ListLink = props => (
 
 export default ({ index = false }) => (
   <header>
-    <ul style={{ listStyle: 'none', marginLeft: 0 }}>
+    <ul className="container">
       <ListLink to="/" className="home_link">
         {index
           ? <span key="white-dot" role="img" aria-label="white-dot">⚪️</span>
