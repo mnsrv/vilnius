@@ -18,7 +18,6 @@ export default ({ index = false }) => (
           : <span key="black-dot" role="img" aria-label="black-dot">⚫️</span>}
       </ListLink>
       <ListLink to="/blog">Блог</ListLink>
-      <span to="/moodboard" style={{ opacity: 0.5 }}>Картинки</span>
     </ul>
   </header>
 )
