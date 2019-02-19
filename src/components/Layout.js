@@ -12,6 +12,7 @@ export default ({ index, title, children }) => [
     htmlAttributes={{ lang: 'ru' }}
   />,
   <Header key="header" index={index} />,
+  <YearProgress key="progress" />,
   <main key="main" className="container">
     <h1>{title}</h1>
     {children}
