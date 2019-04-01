@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "vilnius",
+  "alias": "mansurov.me",
   "builds": [
     {
       "src": "package.json",
