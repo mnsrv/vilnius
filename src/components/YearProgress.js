@@ -50,17 +50,7 @@ const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const text = 'ВРЕМЯ ИДЁТ'
 
 export default class YearProgress extends PureComponent {
-  constructor(props) {
-    super(props)
-
-    console.log('constructor', new Date())
-  }
-  componentDidMount() {
-    console.log('componentDidMount', new Date())
-  }
-
   render() {
-    console.log('render', new Date())
     const date = new Date()
     const year = date.getFullYear()
     const firstDayInMS = new Date(year, 0, 1).getTime()
