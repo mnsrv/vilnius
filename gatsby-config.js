@@ -14,7 +14,12 @@ module.exports = {
         name: `Letterboxd`,
         parserOption: {
           customFields: {
-            item: ['letterboxd:watchedDate', 'letterboxd:filmTitle', 'letterboxd:filmYear', 'letterboxd:memberRating']
+            item: [
+              'letterboxd:watchedDate',
+              'letterboxd:filmTitle',
+              'letterboxd:filmYear',
+              'letterboxd:memberRating'
+            ]
           }
         }
       }

@@ -16,7 +16,7 @@ function getRating(ratingFloat) {
   return '★'.repeat(rating)
 }
 
-export default (movie) => {
+export default movie => {
   if (!movie.letterboxd) {
     return null
   }
@@ -31,11 +31,22 @@ export default (movie) => {
           width="70"
           height="105"
           alt={movie.letterboxd.filmTitle}
-          style={{ float: 'left', display: 'inline-block', marginRight: 15, overflow: 'hidden', borderRadius: 4 }}
+          style={{
+            float: 'left',
+            display: 'inline-block',
+            marginRight: 15,
+            overflow: 'hidden',
+            borderRadius: 4
+          }}
         />
       </a>
       <div>
-        <h3 style={{ marginBottom: 0 }}>{movie.letterboxd.filmTitle} <span style={{ fontWeight: 'normal' }}>{movie.letterboxd.filmYear}</span></h3>
+        <h3 style={{ marginBottom: 0 }}>
+          {movie.letterboxd.filmTitle}{' '}
+          <span style={{ fontWeight: 'normal' }}>
+            {movie.letterboxd.filmYear}
+          </span>
+        </h3>
         <div>{rating}</div>
         <small>{movie.letterboxd.watchedDate}</small>
       </div>

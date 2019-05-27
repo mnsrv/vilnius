@@ -8,12 +8,8 @@ export default ({ data }) => (
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <li key={node.id}>
-          <Link to={node.fields.slug}>
-            {node.frontmatter.title}
-          </Link>
-          <span style={{ color: '#bbb' }}>
-            {' '}{node.frontmatter.date}
-          </span>
+          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+          <span style={{ color: '#bbb' }}> {node.frontmatter.date}</span>
         </li>
       ))}
     </ul>

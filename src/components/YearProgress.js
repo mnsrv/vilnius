@@ -25,18 +25,18 @@ const Block = styled.div`
   width: ${props => props.progress || 10}%;
   padding: 4px 0;
   position: relative;
-  background-color: ${props => props.inverse ? 'black' : 'white'};
-  color: ${props => props.inverse ? 'white' : 'black'};
+  background-color: ${props => (props.inverse ? 'black' : 'white')};
+  color: ${props => (props.inverse ? 'white' : 'black')};
   border-right-color: #dbdbdb;
   border-right-style: solid;
-  border-right-width: ${props => props.noBorder ? 0 : 1}px;
+  border-right-width: ${props => (props.noBorder ? 0 : 1)}px;
 
   @media (max-width: 649px) {
     display: none;
   }
 `
 const MobileText = styled.div`
-  color: ${props => props.inverse ? 'white' : 'black'};
+  color: ${props => (props.inverse ? 'white' : 'black')};
   padding: 4px 1rem;
 
   @media (min-width: 650px) {
@@ -52,21 +52,36 @@ const text = 'ВРЕМЯ ИДЁТ'
 export default () => {
   const date = new Date()
   const year = date.getFullYear()
-  const firstDayInMS = (new Date(year, 0, 1)).getTime()
-  const lastDayInMS = (new Date(year + 1, 0, 1)).getTime()
+  const firstDayInMS = new Date(year, 0, 1).getTime()
+  const lastDayInMS = new Date(year + 1, 0, 1).getTime()
   const nowInMS = date.getTime()
-  const progress = Math.floor((nowInMS - firstDayInMS) / (lastDayInMS - firstDayInMS) * 100)
+  const progress = Math.floor(
+    ((nowInMS - firstDayInMS) / (lastDayInMS - firstDayInMS)) * 100
+  )
 
   return (
     <Container title={`${progress}%`}>
       <Wrapper>
-        {items.map((item, index) => <Block key={item} noBorder={index === items.length - 1}>{text}</Block>)}
+        {items.map((item, index) => (
+          <Block key={item} noBorder={index === items.length - 1}>
+            {text}
+          </Block>
+        ))}
       </Wrapper>
       <MobileText>{progress}%</MobileText>
       <Progress progress={progress}>
         <MobileText inverse>{progress}%</MobileText>
         <Wrapper>
-          {items.map((item, index) => <Block key={item} noBorder={index === items.length - 1} inverse progress={10 * 100 / progress}>{text}</Block>)}
+          {items.map((item, index) => (
+            <Block
+              key={item}
+              noBorder={index === items.length - 1}
+              inverse
+              progress={(10 * 100) / progress}
+            >
+              {text}
+            </Block>
+          ))}
         </Wrapper>
       </Progress>
     </Container>

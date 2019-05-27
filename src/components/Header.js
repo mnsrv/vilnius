@@ -13,9 +13,15 @@ export default ({ index = false }) => (
   <header>
     <ul className="container">
       <ListLink to="/" className="home_link">
-        {index
-          ? <span key="white-dot" role="img" aria-label="white-dot">⚪️</span>
-          : <span key="black-dot" role="img" aria-label="black-dot">⚫️</span>}
+        {index ? (
+          <span key="white-dot" role="img" aria-label="white-dot">
+            ⚪️
+          </span>
+        ) : (
+          <span key="black-dot" role="img" aria-label="black-dot">
+            ⚫️
+          </span>
+        )}
       </ListLink>
       <ListLink to="/blog">Блог</ListLink>
     </ul>
