@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -49,41 +49,52 @@ const Wrapper = styled.div`
 const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const text = 'ВРЕМЯ ИДЁТ'
 
-export default () => {
-  const date = new Date()
-  const year = date.getFullYear()
-  const firstDayInMS = new Date(year, 0, 1).getTime()
-  const lastDayInMS = new Date(year + 1, 0, 1).getTime()
-  const nowInMS = date.getTime()
-  const progress = Math.floor(
-    ((nowInMS - firstDayInMS) / (lastDayInMS - firstDayInMS)) * 100
-  )
+export default class YearProgress extends PureComponent {
+  constructor(props) {
+    super(props)
 
-  return (
-    <Container title={`${progress}%`}>
-      <Wrapper>
-        {items.map((item, index) => (
-          <Block key={item} noBorder={index === items.length - 1}>
-            {text}
-          </Block>
-        ))}
-      </Wrapper>
-      <MobileText>{progress}%</MobileText>
-      <Progress progress={progress}>
-        <MobileText inverse>{progress}%</MobileText>
+    console.log('constructor', new Date())
+  }
+  componentDidMount() {
+    console.log('componentDidMount', new Date())
+  }
+
+  render() {
+    console.log('render', new Date())
+    const date = new Date()
+    const year = date.getFullYear()
+    const firstDayInMS = new Date(year, 0, 1).getTime()
+    const lastDayInMS = new Date(year + 1, 0, 1).getTime()
+    const nowInMS = date.getTime()
+    const progress = Math.floor(
+      ((nowInMS - firstDayInMS) / (lastDayInMS - firstDayInMS)) * 100
+    )
+    return (
+      <Container title={`${progress}%`}>
         <Wrapper>
           {items.map((item, index) => (
-            <Block
-              key={item}
-              noBorder={index === items.length - 1}
-              inverse
-              progress={(10 * 100) / progress}
-            >
+            <Block key={item} noBorder={index === items.length - 1}>
               {text}
             </Block>
           ))}
         </Wrapper>
-      </Progress>
-    </Container>
-  )
+        <MobileText>{progress}%</MobileText>
+        <Progress progress={progress}>
+          <MobileText inverse>{progress}%</MobileText>
+          <Wrapper>
+            {items.map((item, index) => (
+              <Block
+                key={item}
+                noBorder={index === items.length - 1}
+                inverse
+                progress={(10 * 100) / progress}
+              >
+                {text}
+              </Block>
+            ))}
+          </Wrapper>
+        </Progress>
+      </Container>
+    )
+  }
 }
