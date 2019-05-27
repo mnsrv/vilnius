@@ -7,8 +7,8 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout title={post.frontmatter.title}>
+      <small>{post.frontmatter.date}</small>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <i>{post.frontmatter.date}</i>
     </Layout>
   )
 }
