@@ -10,9 +10,6 @@ function getSrc(content) {
   }
   return ''
 }
-function getLink(link) {
-  return link.replace('/mansurov', '')
-}
 function getContent(content) {
   const regex = /<p><img src=".*"\/><\/p>(.*)/
   if (regex.test(content)) {
@@ -27,7 +24,6 @@ export default movie => {
     return null
   }
   const src = getSrc(movie.content)
-  const link = getLink(movie.link)
   const rating = getRating(movie.letterboxd.memberRating)
   const content = getContent(movie.content)
   return (
