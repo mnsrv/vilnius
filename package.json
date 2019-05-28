@@ -13,6 +13,7 @@
     "now-build": "npm run build"
   },
   "dependencies": {
+    "@jamesdanylik/gatsby-source-goodreads": "^0.1.0",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.76",
     "gatsby-plugin-react-helmet": "^3.0.5",

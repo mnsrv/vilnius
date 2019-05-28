@@ -24,6 +24,13 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: '@jamesdanylik/gatsby-source-goodreads',
+      options: {
+        key: process.env.GOODREADS_KEY,
+        id: '74776573'
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-remark',
     'gatsby-plugin-styled-components'

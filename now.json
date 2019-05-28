@@ -2,6 +2,9 @@
   "version": 2,
   "name": "vilnius",
   "alias": "mansurov.me",
+  "env": {
+    "GOODREADS_KEY": "@goodreads_key"
+  },
   "builds": [
     {
       "src": "package.json",

@@ -3,9 +3,23 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Movie from '../components/Movie'
+import Book from '../components/Book'
 
 export default ({ data }) => (
   <Layout title="FEED" index>
+    {data.goodreadsShelf.reviews.map(review => (
+      <Book
+        key={review.id}
+        title={review.book.title}
+        imageUrl={review.book.image_url}
+        authors={review.book.authors}
+        year={review.book.publication_year}
+        readAt={review.read_at}
+        rating={review.rating}
+        url={review.url}
+        body={review.body}
+      />
+    ))}
     {data.allFeedLetterboxd.edges.map(({ node }) => (
       <Movie
         key={node.id}
@@ -37,6 +51,23 @@ export const query = graphql`
             memberRating
           }
         }
+      }
+    }
+    goodreadsShelf(name: { eq: "read" }) {
+      reviews {
+        book {
+          title
+          image_url
+          authors {
+            name
+          }
+          publication_year
+        }
+        read_at
+        rating
+        url
+        id
+        body
       }
     }
   }
