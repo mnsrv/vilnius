@@ -34,7 +34,7 @@ export default ({ data }) => (
 export const query = graphql`
   query {
     allFeedLetterboxd(
-      limit: 10
+      limit: 20
       filter: { guid: { regex: "/watch|review/" } }
       sort: { fields: [letterboxd___watchedDate], order: DESC }
     ) {
