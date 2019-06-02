@@ -64,6 +64,9 @@ header a.active {
   text-decoration: none;
   cursor: default;
 }
+ul {
+  margin-top: 0;
+}
 ul li a {
   display: inline-block;
   padding: 0.5rem 0;
