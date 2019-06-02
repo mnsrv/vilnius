@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { Link } from 'gatsby'
 
 export default class Block extends PureComponent {
   render() {
@@ -17,6 +18,9 @@ export default class Block extends PureComponent {
   renderImage = () => {
     const { title, imageUrl } = this.props
 
+    if (!imageUrl) {
+      return null
+    }
     return (
       <img
         src={imageUrl}
@@ -29,25 +33,55 @@ export default class Block extends PureComponent {
   }
 
   renderTitle = () => {
-    const { rating, title, year } = this.props
-
     return (
       <h3 className="blockTitle">
-        {rating} {title}
-        <span className="blockYear"> {year}</span>
+        {this.renderUrl()}
+        {this.renderYear()}
       </h3>
     )
+  }
+
+  renderUrl = () => {
+    const { rating, title, url } = this.props
+
+    if (!url) {
+      return (
+        <span>
+          {rating} {title}
+        </span>
+      )
+    }
+    return (
+      <Link to={url}>
+        {rating} {title}
+      </Link>
+    )
+  }
+
+  renderYear = () => {
+    const { year } = this.props
+
+    if (!year) {
+      return null
+    }
+    return <span className="blockYear"> {year}</span>
   }
 
   renderSubtitle = () => {
     const { subtitle } = this.props
 
+    if (!subtitle) {
+      return null
+    }
     return <small className="blockSubtitle">{subtitle}</small>
   }
 
   renderText = () => {
     const { text } = this.props
 
+    if (!text) {
+      return null
+    }
     return <p dangerouslySetInnerHTML={{ __html: text }} />
   }
 }

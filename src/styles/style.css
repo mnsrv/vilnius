@@ -64,12 +64,12 @@ header a.active {
   text-decoration: none;
   cursor: default;
 }
-ul {
-  margin: 0;
-}
 ul li a {
   display: inline-block;
   padding: 0.5rem 0;
+}
+p+ol, p+ul {
+  margin-top: -0.75em;
 }
 h1,
 h2,
@@ -90,6 +90,7 @@ h6 {
 }
 .blockYear {
   font-weight: normal;
+  color: #aaa;
 }
 .blockSubtitle {
   margin-top: 5px;
