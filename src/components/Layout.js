@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Header from './Header'
-import YearProgress from './YearProgress'
 
 export default ({ index, title, children }) => [
   <Helmet
@@ -12,7 +11,6 @@ export default ({ index, title, children }) => [
     htmlAttributes={{ lang: 'ru' }}
   />,
   <Header key="header" index={index} />,
-  <YearProgress key="progress" />,
   <main key="main" className="container">
     <h1>{title}</h1>
     {children}

@@ -1,35 +1,43 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Movie from '../components/Movie'
 import Book from '../components/Book'
+import { formatDate } from '../utils'
 
-export default ({ data }) => (
-  <Layout title="FEED" index>
-    {data.goodreadsShelf.reviews.map(review => (
-      <Book
-        key={review.id}
-        title={review.book.title}
-        imageUrl={review.book.image_url}
-        authors={review.book.authors}
-        year={review.book.publication_year}
-        readAt={review.read_at}
-        rating={review.rating}
-        url={review.url}
-        body={review.body}
-      />
-    ))}
-    {data.allFeedLetterboxd.edges.map(({ node }) => (
-      <Movie
-        key={node.id}
-        link={node.link}
-        content={node.content}
-        letterboxd={node.letterboxd}
-      />
-    ))}
-  </Layout>
-)
+export default class IndexPage extends PureComponent {
+  render() {
+    const { data } = this.props
+    const title = formatDate(new Date())
+
+    return (
+      <Layout title={title} index>
+        {data.goodreadsShelf.reviews.map(review => (
+          <Book
+            key={review.id}
+            title={review.book.title}
+            imageUrl={review.book.image_url}
+            authors={review.book.authors}
+            year={review.book.publication_year}
+            readAt={review.read_at}
+            rating={review.rating}
+            url={review.url}
+            body={review.body}
+          />
+        ))}
+        {data.allFeedLetterboxd.edges.map(({ node }) => (
+          <Movie
+            key={node.id}
+            link={node.link}
+            content={node.content}
+            letterboxd={node.letterboxd}
+          />
+        ))}
+      </Layout>
+    )
+  }
+}
 
 export const query = graphql`
   query {
