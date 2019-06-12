@@ -105,6 +105,8 @@ h6 {
   margin-right: 1rem;
   overflow: hidden;
   border-radius: 4px;
+  border: 1px solid lightgray;
+  font-size: 0.75rem;
 }
 
 .wishContainer {
