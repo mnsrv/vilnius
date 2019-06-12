@@ -5,7 +5,7 @@ import Layout from '../../components/Layout'
 import Block from '../../components/Block'
 
 export default ({ data }) => (
-  <Layout title="Блог">
+  <Layout title="Заметки">
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <Block
         key={node.id}
@@ -19,7 +19,10 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: {fields: {slug: {regex: "/blog/"}}},
+      sort: {fields: [frontmatter___date], order: DESC}
+    ) {
       totalCount
       edges {
         node {

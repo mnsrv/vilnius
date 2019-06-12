@@ -15,9 +15,10 @@ export default ({ index = false }) => (
       <ListLink to="/" className="home_link">
         mansurov.me
       </ListLink>
-      <ListLink to="/books">книги</ListLink>
-      <ListLink to="/movies">фильмы</ListLink>
-      <ListLink to="/blog">блог</ListLink>
+      <ListLink to="/books">читаю</ListLink>
+      <ListLink to="/movies">смотрю</ListLink>
+      <ListLink to="/blog">пишу</ListLink>
+      <ListLink to="/wishlist">хочу</ListLink>
     </ul>
   </header>
 )
