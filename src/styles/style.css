@@ -3,6 +3,7 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('../fonts/Rubik.woff2') format('woff2'),
     url('../fonts/Rubik.woff') format('woff');
 }
@@ -10,6 +11,7 @@
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('../fonts/Rubik-Bold.woff2') format('woff2'),
     url('../fonts/Rubik-Bold.woff') format('woff');
 }
