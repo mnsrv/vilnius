@@ -2,16 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
-
-function Wish({ title, imageUrl }) {
-  return (
-    <div className="wish">
-      <div className="wishImageContainer">
-        <img src={imageUrl} alt={title} className="wishImage" />
-      </div>
-    </div>
-  )
-}
+import Wish from '../../components/Wish'
 
 export default ({ data }) => (
   <Layout title="Штуки">
