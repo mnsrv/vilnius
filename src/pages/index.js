@@ -7,6 +7,6 @@ export default class IndexPage extends PureComponent {
   render() {
     const title = formatDate(new Date())
 
-    return <Layout title={title} index />
+    return <Layout title={title} />
   }
 }

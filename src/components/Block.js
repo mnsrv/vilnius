@@ -22,13 +22,14 @@ export default class Block extends PureComponent {
       return null
     }
     return (
-      <img
-        src={imageUrl}
-        width="100"
-        height="150"
-        alt={title}
-        className="blockImage"
-      />
+      <a
+        className="blockImageLink"
+        href={imageUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={imageUrl} width="100" alt={title} className="blockImage" />
+      </a>
     )
   }
 

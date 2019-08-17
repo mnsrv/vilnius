@@ -1,24 +1,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const ListLink = props => (
-  <li style={{ display: 'inline-block', marginRight: '1rem' }}>
-    <Link to={props.to} className={props.className} activeClassName="active">
-      {props.children}
-    </Link>
-  </li>
-)
+const menu = [
+  { title: 'mansurov.me', url: '/' },
+  { title: 'слушаю', url: '/music' },
+  { title: 'смотрю', url: '/movies' },
+  { title: 'читаю', url: '/books' },
+  { title: 'пишу', url: '/blog' },
+  { title: 'хочу', url: '/wishlist' }
+]
 
-export default ({ index = false }) => (
+export default () => (
   <header>
     <ul className="container">
-      <ListLink to="/" className="home_link">
-        mansurov.me
-      </ListLink>
-      <ListLink to="/books">читаю</ListLink>
-      <ListLink to="/movies">смотрю</ListLink>
-      <ListLink to="/blog">пишу</ListLink>
-      <ListLink to="/wishlist">хочу</ListLink>
+      {menu.map(({ title, url }) => (
+        <li key={url} className="headerLink">
+          <Link to={url} activeClassName="active">
+            {title}
+          </Link>
+        </li>
+      ))}
     </ul>
   </header>
 )

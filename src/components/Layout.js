@@ -3,14 +3,14 @@ import { Helmet } from 'react-helmet'
 
 import Header from './Header'
 
-export default ({ index, title, children }) => [
+export default ({ title, children }) => [
   <Helmet
     key="helmet"
     defaultTitle="mansurov.me"
     title={title}
     htmlAttributes={{ lang: 'ru' }}
   />,
-  <Header key="header" index={index} />,
+  <Header key="header" />,
   <main key="main" className="container">
     <h1>{title}</h1>
     {children}

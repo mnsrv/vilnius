@@ -1,27 +1,26 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../../components/Layout'
-import Block from '../../components/Block'
 
 export default ({ data }) => (
   <Layout title="Заметки">
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <Block
-        key={node.id}
-        url={node.fields.slug}
-        title={node.frontmatter.title}
-        year={node.frontmatter.date}
-      />
-    ))}
+    <ul>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <li key={node.id} className="blogLink">
+          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+          <span className="blogLinkDate"> {node.frontmatter.date}</span>
+        </li>
+      ))}
+    </ul>
   </Layout>
 )
 
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: {fields: {slug: {regex: "/blog/"}}},
-      sort: {fields: [frontmatter___date], order: DESC}
+      filter: { fields: { slug: { regex: "/blog/" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       totalCount
       edges {

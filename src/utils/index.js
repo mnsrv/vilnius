@@ -9,7 +9,7 @@ export function getMovieSrc(content) {
   const regex = /<img src="(.*)"\/>/
   if (regex.test(content)) {
     const match = content.match(regex)
-    return match[1].replace('0-500-0-750', '0-200-0-300')
+    return match[1].replace('0-500-0-750', '0-500-0-750')
   }
   return ''
 }
@@ -23,9 +23,12 @@ export function getMovieContent(content) {
 }
 export function getBookAuthor(authors) {
   if (authors && authors.length > 0) {
-    return `by ${authors[0].name}`
+    return authors[0].name
   }
   return ''
+}
+export function getBookImageUrl(url) {
+  return url.replace('._SX98_', '')
 }
 export function formatDate(date) {
   const months = [

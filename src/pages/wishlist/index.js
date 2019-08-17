@@ -2,16 +2,17 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
-import Wish from '../../components/Wish'
+import Block from '../../components/Block'
 
 export default ({ data }) => (
   <Layout title="Штуки">
     <div className="wishContainer">
       {data.allWishlistJson.edges.map(({ node }) => (
-        <Wish
+        <Block
           key={node.id}
           imageUrl={node.image.publicURL}
           title={node.title}
+          subtitle={node.brand}
         />
       ))}
     </div>
@@ -28,6 +29,7 @@ export const query = graphql`
             publicURL
           }
           title
+          brand
           date(formatString: "DD.MM.YYYY")
         }
       }
