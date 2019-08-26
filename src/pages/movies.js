@@ -17,8 +17,6 @@ export default class MoviesPage extends PureComponent {
               key={node.id}
               rating={getRating(node.letterboxd.memberRating)}
               title={node.letterboxd.filmTitle}
-              year={node.letterboxd.filmYear}
-              subtitle={node.letterboxd.watchedDate}
               imageUrl={getMovieSrc(node.content)}
               text={getMovieContent(node.content)}
             />

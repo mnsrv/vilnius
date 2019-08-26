@@ -134,8 +134,7 @@ h6 {
   .blockImage {
     width: auto;
     max-width: 100%;
-    height: auto;
-    max-height: 25vw;
+    height: 25vw;
     margin-bottom: 10px;
   }
   .block p {
