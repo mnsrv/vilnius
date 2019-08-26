@@ -12,7 +12,7 @@ export default class MoviesPage extends PureComponent {
     return (
       <Layout title="Фильмы">
         <div className="blocks">
-          {data.allFeedLetterboxd.edges.map(({ node }) => (
+          {[data.allFeedLetterboxd.edges[0]].map(({ node }) => (
             <Block
               key={node.id}
               rating={getRating(node.letterboxd.memberRating)}

@@ -14,11 +14,15 @@ export function getMovieSrc(content) {
   return ''
 }
 export function getMovieContent(content) {
+  console.log(content)
   const regex = /<p><img src=".*"\/><\/p>(.*)/
+  console.log(regex.test(content))
   if (regex.test(content)) {
     const match = content.match(regex)
+    console.log(match)
     return match[1].replace(/<p>Watched on.*<\/p>/, '')
   }
+  console.log('?? empty')
   return ''
 }
 export function getBookAuthor(authors) {
