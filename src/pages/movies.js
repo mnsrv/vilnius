@@ -8,7 +8,7 @@ import { getRating, getMovieSrc, getMovieContent } from '../utils'
 export default class MoviesPage extends PureComponent {
   render() {
     const { data } = this.props
-
+    console.log(this.props)
     return (
       <Layout title="Фильмы">
         <div className="blocks">
