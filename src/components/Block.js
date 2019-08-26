@@ -83,6 +83,8 @@ export default class Block extends PureComponent {
     if (!text) {
       return null
     }
-    return <div dangerouslySetInnerHTML={{ __html: text }} />
+    return (
+      <div className="blockText" dangerouslySetInnerHTML={{ __html: text }} />
+    )
   }
 }
