@@ -30,7 +30,7 @@ export default class MoviesPage extends PureComponent {
 export const query = graphql`
   query {
     allFeedLetterboxd(
-      limit: 20
+      limit: 39
       filter: { guid: { regex: "/watch|review/" } }
       sort: { fields: [letterboxd___watchedDate], order: DESC }
     ) {
