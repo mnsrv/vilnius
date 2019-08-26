@@ -80,9 +80,13 @@ export default class Block extends PureComponent {
   renderText = () => {
     const { text } = this.props
 
+    console.log(this.props)
+    console.log(!text, text)
     if (!text) {
+      console.log('???')
       return null
     }
+    console.log('MORE QUESTIONS', text)
     return <p dangerouslySetInnerHTML={{ __html: text }} />
   }
 }
