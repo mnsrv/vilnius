@@ -6,5 +6,13 @@
     "image": "images/po-33.png",
     "price": 89,
     "done": false
+  },
+  {
+    "title": "Akai MPK Mini MKII",
+    "brand": "Akai",
+    "date": "2019-09-01",
+    "image": "images/akai_mpkmini_mkii.png",
+    "price": 98,
+    "done": false
   }
 ]

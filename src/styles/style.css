@@ -88,6 +88,9 @@ h6 {
 .blockTitle {
   margin-bottom: 0px;
 }
+.blockText {
+  margin-top: 0.5rem;
+}
 .blockYear {
   font-weight: normal;
   color: #00000050;
@@ -134,14 +137,17 @@ h6 {
   .block:nth-child(3) {
     padding-top: 0;
   }
+  .blockImageLink {
+    height: 25vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
   .blockImage {
     width: auto;
     max-width: 100%;
-    height: 25vw;
-    margin-bottom: 10px;
-  }
-  .blockText {
-    margin-top: 0.5rem;
+    height: auto;
+    max-height: 100%;
   }
   header {
     position: fixed;

@@ -6,7 +6,7 @@ import Block from '../../components/Block'
 
 export default ({ data }) => (
   <Layout title="Штуки">
-    <div className="wishContainer">
+    <div className="blocks">
       {data.allWishlistJson.edges.map(({ node }) => (
         <Block
           key={node.id}
@@ -30,6 +30,7 @@ export const query = graphql`
           }
           title
           brand
+          price
           date(formatString: "DD.MM.YYYY")
         }
       }
