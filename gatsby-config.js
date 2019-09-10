@@ -31,6 +31,7 @@ module.exports = {
         id: '74776573'
       }
     },
+    'gatsby-plugin-twitter',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-remark',
     'gatsby-transformer-json',
