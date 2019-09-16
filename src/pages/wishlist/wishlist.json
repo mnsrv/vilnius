@@ -1,18 +1,18 @@
 [
   {
-    "title": "PO-33",
-    "brand": "Teenage Engineering",
-    "date": "2019-05-30",
-    "image": "images/po-33.png",
-    "price": 89,
-    "done": false
-  },
-  {
     "title": "MPK Mini MKII LE Black",
     "brand": "Akai",
     "date": "2019-09-01",
     "image": "images/akai-mpk-mini-mkii-black.jpg",
     "price": 98,
+    "done": false
+  },
+  {
+    "title": "ATH-M50x",
+    "brand": "Audio-Technica",
+    "date": "2019-09-16",
+    "image": "images/audio-technica-ath-m50x.png",
+    "price": 149,
     "done": false
   }
 ]
