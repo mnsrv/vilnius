@@ -9,13 +9,13 @@ export default class IndexPage extends PureComponent {
 
     return (
       <Layout title={title}>
-        <blockquote className="twitter-tweet" data-lang="ru">
+        <blockquote class="twitter-tweet" data-lang="en">
           <p lang="en" dir="ltr">
-            BORING!
+            new step?
           </p>
-          &mdash; Donald J. Trump (@realDonaldTrump){' '}
-          <a href="https://twitter.com/realDonaldTrump/status/1144056731653169152?ref_src=twsrc%5Etfw">
-            27 июня 2019 г.
+          &mdash; Roman Kushnarev (@ramzesdoto){' '}
+          <a href="https://twitter.com/ramzesdoto/status/1173584017788157953?ref_src=twsrc%5Etfw">
+            September 16, 2019
           </a>
         </blockquote>
       </Layout>
