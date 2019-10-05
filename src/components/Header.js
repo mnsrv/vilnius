@@ -3,11 +3,11 @@ import { Link } from 'gatsby'
 
 const menu = [
   { title: 'mansurov.me', url: '/' },
-  { title: 'слушаю', url: '/music/' },
-  { title: 'смотрю', url: '/movies/' },
-  { title: 'читаю', url: '/books/' },
-  { title: 'пишу', url: '/blog/' },
-  { title: 'хочу', url: '/wishlist/' }
+  { title: 'blog', url: '/blog/' },
+  { title: 'music', url: '/music/' },
+  { title: 'books', url: '/books/' },
+  { title: 'movies', url: '/movies/' },
+  { title: 'wishlist', url: '/wishlist/' }
 ]
 
 export default () => (
