@@ -31,6 +31,13 @@ module.exports = {
         id: '74776573'
       }
     },
+    {
+      resolve: `gatsby-source-tumblr`,
+      options: {
+        blogIdentifier: 'sasha-mjolnir',
+        consumerKey: process.env.TUMBLR_CONSUMER_KEY
+      }
+    },
     'gatsby-plugin-twitter',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-remark',

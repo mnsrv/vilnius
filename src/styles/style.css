@@ -170,3 +170,13 @@ h6 {
     text-decoration: none;
   }
 }
+
+.tumblr {
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+.tumblr img {
+  display: block;
+  width: 100%;
+}

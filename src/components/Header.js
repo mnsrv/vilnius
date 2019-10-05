@@ -6,6 +6,7 @@ const menu = [
   { title: 'blog', url: '/blog/' },
   { title: 'music', url: '/music/' },
   { title: 'books', url: '/books/' },
+  { title: 'tumblr', url: '/tumblr' },
   { title: 'movies', url: '/movies/' },
   { title: 'wishlist', url: '/wishlist/' }
 ]
