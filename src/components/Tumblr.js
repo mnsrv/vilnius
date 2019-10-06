@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 
-function Tumblr({ title, imageUrl }) {
+function Tumblr({ imageUrl, width, height }) {
   if (!imageUrl) {
     return null
   }
@@ -10,8 +10,9 @@ function Tumblr({ title, imageUrl }) {
       target="_blank"
       rel="noopener noreferrer"
       className="tumblr"
+      style={{ paddingBottom: `${(height / width) * 100}%` }}
     >
-      <img src={imageUrl} width="100" alt={title} />
+      <img src={imageUrl} />
     </a>
   )
 }

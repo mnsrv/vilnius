@@ -17,7 +17,11 @@ export default class TumblrPage extends PureComponent {
                 index % 3 === 0 &&
                 node.photos.map((photo, photoIndex) => (
                   <li key={`${node.id}_${photoIndex}`}>
-                    <Tumblr imageUrl={photo.original_size.url} />
+                    <Tumblr
+                      imageUrl={photo.original_size.url}
+                      width={photo.original_size.width}
+                      height={photo.original_size.height}
+                    />
                   </li>
                 ))
             )}
@@ -28,7 +32,11 @@ export default class TumblrPage extends PureComponent {
                 index % 3 === 1 &&
                 node.photos.map((photo, photoIndex) => (
                   <li key={`${node.id}_${photoIndex}`}>
-                    <Tumblr imageUrl={photo.original_size.url} />
+                    <Tumblr
+                      imageUrl={photo.original_size.url}
+                      width={photo.original_size.width}
+                      height={photo.original_size.height}
+                    />
                   </li>
                 ))
             )}
@@ -39,7 +47,11 @@ export default class TumblrPage extends PureComponent {
                 index % 3 === 2 &&
                 node.photos.map((photo, photoIndex) => (
                   <li key={`${node.id}_${photoIndex}`}>
-                    <Tumblr imageUrl={photo.original_size.url} />
+                    <Tumblr
+                      imageUrl={photo.original_size.url}
+                      width={photo.original_size.width}
+                      height={photo.original_size.height}
+                    />
                   </li>
                 ))
             )}
@@ -52,7 +64,7 @@ export default class TumblrPage extends PureComponent {
 
 export const query = graphql`
   query {
-    allTumblrPost(filter: { type: { eq: "photo" } }, limit: 300) {
+    allTumblrPost(filter: { type: { eq: "photo" } }, limit: 15) {
       edges {
         node {
           id
