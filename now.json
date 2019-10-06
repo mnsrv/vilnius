@@ -3,11 +3,13 @@
   "name": "vilnius",
   "alias": "mansurov.me",
   "env": {
-    "GOODREADS_KEY": "@goodreads_key"
+    "GOODREADS_KEY": "@goodreads_key",
+    "TUMBLR_CONSUMER_KEY": "@tumblr_consumer_key"
   },
   "build": {
     "env": {
-      "GOODREADS_KEY": "@goodreads_key"
+      "GOODREADS_KEY": "@goodreads_key",
+      "TUMBLR_CONSUMER_KEY": "@tumblr_consumer_key"
     }
   },
   "builds": [
