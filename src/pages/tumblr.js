@@ -18,9 +18,8 @@ export default class TumblrPage extends PureComponent {
                 node.photos.map((photo, photoIndex) => (
                   <li key={`${node.id}_${photoIndex}`}>
                     <Tumblr
-                      imageUrl={photo.original_size.url}
-                      width={photo.original_size.width}
-                      height={photo.original_size.height}
+                      original_size={photo.original_size}
+                      alt_sizes={photo.alt_sizes}
                     />
                   </li>
                 ))
@@ -33,9 +32,8 @@ export default class TumblrPage extends PureComponent {
                 node.photos.map((photo, photoIndex) => (
                   <li key={`${node.id}_${photoIndex}`}>
                     <Tumblr
-                      imageUrl={photo.original_size.url}
-                      width={photo.original_size.width}
-                      height={photo.original_size.height}
+                      original_size={photo.original_size}
+                      alt_sizes={photo.alt_sizes}
                     />
                   </li>
                 ))
@@ -48,9 +46,8 @@ export default class TumblrPage extends PureComponent {
                 node.photos.map((photo, photoIndex) => (
                   <li key={`${node.id}_${photoIndex}`}>
                     <Tumblr
-                      imageUrl={photo.original_size.url}
-                      width={photo.original_size.width}
-                      height={photo.original_size.height}
+                      original_size={photo.original_size}
+                      alt_sizes={photo.alt_sizes}
                     />
                   </li>
                 ))
@@ -64,21 +61,22 @@ export default class TumblrPage extends PureComponent {
 
 export const query = graphql`
   query {
-    allTumblrPost(filter: { type: { eq: "photo" } }, limit: 15) {
+    allTumblrPost(filter: { type: { eq: "photo" } }, limit: 100) {
       edges {
         node {
           id
-          type
-          date
-          post_url
           photos {
             original_size {
               height
               url
               width
             }
+            alt_sizes {
+              height
+              url
+              width
+            }
           }
-          blog_name
         }
       }
     }
