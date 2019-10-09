@@ -61,7 +61,11 @@ export default class TumblrPage extends PureComponent {
 
 export const query = graphql`
   query {
-    allTumblrPost(filter: { type: { eq: "photo" } }, limit: 100) {
+    allTumblrPost(
+      filter: { type: { eq: "photo" } }
+      limit: 100
+      sort: { fields: date, order: DESC }
+    ) {
       edges {
         node {
           id
