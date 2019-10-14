@@ -19,6 +19,7 @@ export default class MoviesPage extends PureComponent {
               title={node.letterboxd.filmTitle}
               imageUrl={getMovieSrc(node.content)}
               text={getMovieContent(node.content)}
+              year={node.letterboxd.filmYear}
             />
           ))}
         </div>
@@ -30,7 +31,7 @@ export default class MoviesPage extends PureComponent {
 export const query = graphql`
   query {
     allFeedLetterboxd(
-      limit: 39
+      limit: 48
       filter: { guid: { regex: "/watch|review/" } }
       sort: { fields: [letterboxd___watchedDate], order: DESC }
     ) {
