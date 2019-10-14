@@ -19,24 +19,39 @@ html {
   font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   line-height: 1.4;
-  background-color: #f4cbc6;
-  color: black;
   -webkit-overflow-scrolling: touch;
 }
 body {
+  --bg: #f4cbc6;
+  --text: #000;
+  --link: #000;
+  --small: #00000050;
+  --active: #fff;
+
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: var(--bg);
+  color: var(--text);
+}
+body.dark {
+  --bg: #323232;
+  --text: #f0f0f0;
+  --link: #ffa8af;
+  --small: #ffffff50;
+  --active: #fff;
 }
 p {
   margin-top: 0;
 }
 a {
-  color: black;
+  color: var(--link);
 }
 a:hover {
-  color: white;
+  color: var(--active);
 }
 a.active {
-  color: white;
+  color: var(--active);
   cursor: default;
   text-decoration: none;
 }
@@ -93,7 +108,7 @@ h6 {
 }
 .blockYear {
   font-weight: normal;
-  color: #00000050;
+  color: var(--small);
 }
 .blockSubtitle {
   margin-top: 5px;
@@ -109,7 +124,7 @@ h6 {
   font-size: 0.75rem;
 }
 .blogLinkDate {
-  color: #00000050;
+  color: var(--small);
 }
 
 @media (min-width: 1300px) {

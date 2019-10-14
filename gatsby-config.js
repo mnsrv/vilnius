@@ -40,6 +40,7 @@ module.exports = {
         consumerKey: process.env.TUMBLR_CONSUMER_KEY
       }
     },
+    'gatsby-plugin-dark-mode',
     'gatsby-plugin-twitter',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-remark',
