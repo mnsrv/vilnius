@@ -4566,13 +4566,6 @@ gatsby-plugin-styled-components@^3.1.8:
   dependencies:
     "@babel/runtime" "^7.6.2"
 
-gatsby-plugin-twitter@^2.1.9:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-twitter/-/gatsby-plugin-twitter-2.1.9.tgz#ec3bdc3dbe7326e99e930f3ac278828c4f57b773"
-  integrity sha512-QVlDpeTrH19xPG/Go+cXh3pjm28fzqlBsBy/bG702/72PDNL1g9Pyuo0HVycyy4LbrlAMtXv8cbiDzOQanSI1w==
-  dependencies:
-    "@babel/runtime" "^7.6.2"
-
 gatsby-react-router-scroll@^2.1.11:
   version "2.1.11"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.1.11.tgz#d5605632e84be21ba5a8970944bc5a3ece82eeb0"

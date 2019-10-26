@@ -54,7 +54,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-dark-mode',
-    'gatsby-plugin-twitter',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-remark',
     'gatsby-transformer-json',
