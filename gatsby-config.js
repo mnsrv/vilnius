@@ -1,6 +1,9 @@
 require('dotenv').config()
 
 module.exports = {
+  siteMetadata: {
+    mapboxToken: process.env.MAPBOX_TOKEN
+  },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

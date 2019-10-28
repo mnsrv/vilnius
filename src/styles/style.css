@@ -166,6 +166,7 @@ h6 {
   }
   header {
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 25vw;
@@ -184,9 +185,20 @@ h6 {
     padding: 0;
     text-decoration: none;
   }
+  .map.mapboxgl-map {
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .tumblr {
   display: block;
   padding: 0;
+}
+.map {
+  height: 500px;
 }
