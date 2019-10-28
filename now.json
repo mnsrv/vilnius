@@ -3,11 +3,13 @@
   "name": "vilnius",
   "alias": "mansurov.me",
   "env": {
+    "MAPBOX_TOKEN": "@mapbox_token",
     "GOODREADS_KEY": "@goodreads_key",
     "TUMBLR_CONSUMER_KEY": "@tumblr_consumer_key"
   },
   "build": {
     "env": {
+      "MAPBOX_TOKEN": "@mapbox_token",
       "GOODREADS_KEY": "@goodreads_key",
       "TUMBLR_CONSUMER_KEY": "@tumblr_consumer_key"
     }
@@ -16,7 +18,9 @@
     {
       "src": "package.json",
       "use": "@now/static-build",
-      "config": { "distDir": "public" }
+      "config": {
+        "distDir": "public"
+      }
     }
   ]
 }

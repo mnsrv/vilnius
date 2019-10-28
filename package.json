@@ -26,6 +26,7 @@
     "gatsby-source-tumblr": "^0.1.2",
     "gatsby-transformer-json": "^2.2.12",
     "gatsby-transformer-remark": "^2.6.27",
+    "mapbox-gl": "^1.5.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
