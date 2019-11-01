@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 const menu = [
   { title: 'mansurov.me', url: '/' },
   { title: 'blog', url: '/blog/' },
-  { title: 'music', url: '/music/' },
   { title: 'books', url: '/books/' },
   { title: 'travel', url: '/travel/' },
   { title: 'movies', url: '/movies/' },
