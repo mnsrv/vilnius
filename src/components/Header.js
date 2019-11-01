@@ -6,7 +6,6 @@ const menu = [
   { title: 'blog', url: '/blog/' },
   { title: 'books', url: '/books/' },
   { title: 'travel', url: '/travel/' },
-  { title: 'movies', url: '/movies/' },
   { title: 'wishlist', url: '/wishlist/' }
 ]
 

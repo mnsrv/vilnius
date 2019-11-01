@@ -13,23 +13,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-rss-feed',
-      options: {
-        url: 'https://letterboxd.com/mansurov/rss/',
-        name: `Letterboxd`,
-        parserOption: {
-          customFields: {
-            item: [
-              'letterboxd:watchedDate',
-              'letterboxd:filmTitle',
-              'letterboxd:filmYear',
-              'letterboxd:memberRating'
-            ]
-          }
-        }
-      }
-    },
-    {
       resolve: '@jamesdanylik/gatsby-source-goodreads',
       options: {
         key: process.env.GOODREADS_KEY,

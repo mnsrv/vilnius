@@ -22,7 +22,6 @@
     "gatsby-plugin-react-helmet": "^3.1.10",
     "gatsby-plugin-styled-components": "^3.1.8",
     "gatsby-source-filesystem": "^2.1.29",
-    "gatsby-source-rss-feed": "^1.1.1",
     "gatsby-transformer-json": "^2.2.12",
     "gatsby-transformer-remark": "^2.6.27",
     "mapbox-gl": "^1.5.0",
