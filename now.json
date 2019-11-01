@@ -4,14 +4,12 @@
   "alias": "mansurov.me",
   "env": {
     "MAPBOX_TOKEN": "@mapbox_token",
-    "GOODREADS_KEY": "@goodreads_key",
-    "TUMBLR_CONSUMER_KEY": "@tumblr_consumer_key"
+    "GOODREADS_KEY": "@goodreads_key"
   },
   "build": {
     "env": {
       "MAPBOX_TOKEN": "@mapbox_token",
-      "GOODREADS_KEY": "@goodreads_key",
-      "TUMBLR_CONSUMER_KEY": "@tumblr_consumer_key"
+      "GOODREADS_KEY": "@goodreads_key"
     }
   },
   "builds": [

@@ -37,13 +37,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-tumblr`,
-      options: {
-        blogIdentifier: 'sasha-mjolnir',
-        consumerKey: process.env.TUMBLR_CONSUMER_KEY
-      }
-    },
-    {
       resolve: 'gatsby-plugin-ackee-tracker',
       options: {
         // Domatin ID found when adding a domain in the admin panel.
