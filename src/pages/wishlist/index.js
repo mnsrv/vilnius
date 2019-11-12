@@ -11,7 +11,7 @@ export default ({ data }) => (
         <Block
           key={node.id}
           imageUrl={node.image.publicURL}
-          title={node.title}
+          title={`${node.title} – $${node.price}`}
           subtitle={node.brand}
         />
       ))}
