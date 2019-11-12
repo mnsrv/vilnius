@@ -1,5 +1,13 @@
 [
   {
+    "title": "PopGrip",
+    "brand": "PopSockets",
+    "date": "2019-11-12",
+    "image": "images/popsocket.png",
+    "price": 10,
+    "done": false
+  },
+  {
     "title": "MPK Mini MKII LE Black",
     "brand": "Akai",
     "date": "2019-09-01",
