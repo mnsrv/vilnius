@@ -1,5 +1,14 @@
 [
   {
+    "title": "2976 Chelsea",
+    "brand": "Dr. Martens",
+    "date": "2019-12-19",
+    "image": "images/dr-martens-2976.png",
+    "price": 145,
+    "done": false,
+    "url": "https://www.drmartens.com/us/en/p/22227001"
+  },
+  {
     "title": "PopGrip",
     "brand": "PopSockets",
     "date": "2019-11-12",
