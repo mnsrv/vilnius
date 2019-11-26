@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Block from '../components/Block'
-import { getRating, getBookAuthor, getBookImageUrl } from '../utils'
+import { getRating, getBookAuthor } from '../utils'
 
 export default class BooksPage extends PureComponent {
   render() {
@@ -18,8 +18,6 @@ export default class BooksPage extends PureComponent {
               rating={getRating(review.rating)}
               title={review.book.title}
               subtitle={getBookAuthor(review.book.authors)}
-              imageUrl={getBookImageUrl(review.book.image_url)}
-              text={review.body}
             />
           ))}
         </div>

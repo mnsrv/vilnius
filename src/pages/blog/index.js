@@ -1,16 +1,19 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
+import Block from '../../components/Block'
 
 export default ({ data }) => (
   <Layout title="Заметки">
     <ul>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <li key={node.id} className="blogLink">
-          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-          <span className="blogLinkDate"> {node.frontmatter.date}</span>
-        </li>
+        <Block
+          key={node.id}
+          url={node.fields.slug}
+          title={node.frontmatter.title}
+          subtitle={node.frontmatter.date}
+        />
       ))}
     </ul>
   </Layout>
