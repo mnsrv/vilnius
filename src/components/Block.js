@@ -48,13 +48,13 @@ export default class Block extends PureComponent {
     if (!url) {
       return (
         <span>
-          {rating} {title}
+          {title} {rating}
         </span>
       )
     }
     return (
       <Link to={url}>
-        {rating} {title}
+        {title} {rating}
       </Link>
     )
   }
@@ -74,7 +74,11 @@ export default class Block extends PureComponent {
     if (!subtitle) {
       return null
     }
-    return <small className="blockSubtitle">{subtitle}</small>
+    return (
+      <small className="blockSubtitle">
+        <i>{subtitle}</i>
+      </small>
+    )
   }
 
   renderText = () => {

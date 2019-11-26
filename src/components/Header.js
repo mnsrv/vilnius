@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const menu = [
-  { title: 'mansurov.me', url: '/' },
+  { title: 'home', url: '/' },
   { title: 'blog', url: '/blog/' },
   { title: 'books', url: '/books/' },
   { title: 'travel', url: '/travel/' },

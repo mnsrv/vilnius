@@ -10,7 +10,7 @@ export default ({ data }) => (
       {data.allWishlistJson.edges.map(({ node }) => (
         <Block
           key={node.id}
-          title={`$${node.price} – ${node.title}`}
+          title={`${node.title} – $${node.price}`}
           subtitle={node.brand}
         />
       ))}
