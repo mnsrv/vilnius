@@ -10,7 +10,7 @@ export default class IndexPage extends PureComponent {
 
     return (
       <Layout title="mansurov.me">
-        <Block imageUrl={data.file.publicURL} />
+        <Block imageUrl={data.file.publicURL} subtitle="Winter in Yakutsk" />
       </Layout>
     )
   }
