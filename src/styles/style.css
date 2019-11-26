@@ -82,8 +82,7 @@ h6 {
   margin-right: 1rem;
 }
 .block {
-  display: flex;
-  padding: 10px 0;
+  padding-bottom: 20px;
 }
 .blockTitle {
   margin-bottom: 0px;
@@ -99,14 +98,10 @@ h6 {
   margin-top: 5px;
   display: block;
 }
-.blockImageLink {
-  cursor: zoom-in;
-}
 .blockImage {
   display: block;
-  flex-shrink: 0;
-  margin-right: 1rem;
-  font-size: 0.75rem;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1300px) {
@@ -119,18 +114,6 @@ h6 {
   }
   h1 {
     display: none;
-  }
-  .blockImageLink {
-    height: 25vw;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .blockImage {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
   }
   header {
     position: fixed;

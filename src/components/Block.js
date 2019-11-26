@@ -21,16 +21,7 @@ export default class Block extends PureComponent {
     if (!imageUrl) {
       return null
     }
-    return (
-      <a
-        className="blockImageLink"
-        href={imageUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={imageUrl} width="100" alt={title} className="blockImage" />
-      </a>
-    )
+    return <img src={imageUrl} width="100" alt={title} className="blockImage" />
   }
 
   renderTitle = () => {
