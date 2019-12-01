@@ -8,8 +8,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`
+        name: 'blog',
+        path: `${__dirname}/src/pages/blog`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'wishlist',
+        path: `${__dirname}/src/pages/wishlist`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`
       }
     },
     {
@@ -34,8 +48,35 @@ module.exports = {
     },
     'gatsby-plugin-dark-mode',
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 960,
+              linkImagesToOriginal: false,
+              showCaptions: true,
+              wrapperStyle: fluidResult => {
+                if (fluidResult.aspectRatio < 1) {
+                  return 'max-width: 480px !important; width: 50%;'
+                }
+                return ''
+              }
+            }
+          },
+          {
+            resolve: 'gatsby-remark-external-links'
+          }
+        ]
+      }
+    },
     'gatsby-transformer-json',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components'
   ]
 }

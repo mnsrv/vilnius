@@ -6,9 +6,11 @@ import Layout from '../components/Layout'
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-    <Layout title={post.frontmatter.title}>
+    <Layout title={post.frontmatter.title} showTitle>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <small>{post.frontmatter.date}</small>
+      <small>
+        <i>{post.frontmatter.date}</i>
+      </small>
     </Layout>
   )
 }

@@ -18,7 +18,7 @@ export default class IndexPage extends PureComponent {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "images/home.jpg" }) {
+    file(relativePath: { eq: "home.jpg" }) {
       publicURL
     }
   }

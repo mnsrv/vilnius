@@ -27,6 +27,7 @@ body.dark {
 }
 p {
   margin-top: 0;
+  overflow: hidden;
 }
 a {
   color: var(--link);
@@ -47,12 +48,12 @@ main {
 header {
   padding: 1rem 0;
 }
-ul {
+header ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-li a {
+header li a {
   display: inline-block;
   padding: 0.5rem 0;
 }
@@ -69,7 +70,14 @@ h6 {
   margin-top: 0;
   margin-bottom: 1.45rem;
 }
-
+figure {
+  margin: 0;
+  padding: 0;
+}
+figure figcaption {
+  font-size: smaller;
+  font-style: italic;
+}
 @media (max-width: 1299px) {
   .container {
     padding: 0 1rem;
@@ -112,7 +120,7 @@ h6 {
     margin-bottom: 0;
     max-width: none;
   }
-  h1 {
+  h1:not(.visible) {
     display: none;
   }
   header {
@@ -148,4 +156,12 @@ h6 {
 
 .map {
   height: 500px;
+}
+
+.gatsby-resp-image-figure .gatsby-resp-image-wrapper {
+  float: none;
+}
+.gatsby-resp-image-wrapper {
+  margin: 0 !important;
+  float: left;
 }

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import Header from './Header'
 
-export default ({ title, children }) => [
+export default ({ title, showTitle, children }) => [
   <Helmet
     key="helmet"
     defaultTitle="mansurov.me"
@@ -12,7 +12,7 @@ export default ({ title, children }) => [
   />,
   <Header key="header" />,
   <main key="main" className="container">
-    <h1>{title}</h1>
+    <h1 className={showTitle ? 'visible' : ''}>{title}</h1>
     {children}
   </main>
 ]

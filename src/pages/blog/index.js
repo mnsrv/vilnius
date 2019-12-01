@@ -6,25 +6,20 @@ import Block from '../../components/Block'
 
 export default ({ data }) => (
   <Layout title="Заметки">
-    <ul>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Block
-          key={node.id}
-          url={node.fields.slug}
-          title={node.frontmatter.title}
-          subtitle={node.frontmatter.date}
-        />
-      ))}
-    </ul>
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <Block
+        key={node.id}
+        url={node.fields.slug}
+        title={node.frontmatter.title}
+        subtitle={node.frontmatter.date}
+      />
+    ))}
   </Layout>
 )
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      filter: { fields: { slug: { regex: "/blog/" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {
