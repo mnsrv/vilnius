@@ -5,14 +5,24 @@ export default class Block extends PureComponent {
   render() {
     return (
       <div className="block">
-        {this.renderImage()}
         <div>
+          {this.renderImage()}
           {this.renderTitle()}
           {this.renderSubtitle()}
           {this.renderText()}
         </div>
+        {this.renderPreview()}
       </div>
     )
+  }
+
+  renderPreview = () => {
+    const { title, preview } = this.props
+
+    if (!preview) {
+      return null
+    }
+    return <img src={preview} alt={title} className="blockPreview" />
   }
 
   renderImage = () => {
@@ -21,7 +31,7 @@ export default class Block extends PureComponent {
     if (!imageUrl) {
       return null
     }
-    return <img src={imageUrl} width="100" alt={title} className="blockImage" />
+    return <img src={imageUrl} alt={title} className="blockImage" />
   }
 
   renderTitle = () => {

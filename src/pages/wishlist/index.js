@@ -12,6 +12,7 @@ export default ({ data }) => (
           key={node.id}
           title={`${node.title} – $${node.price}`}
           subtitle={node.brand}
+          preview={node.image.publicURL}
         />
       ))}
     </div>

@@ -90,6 +90,8 @@ figure figcaption {
   margin-right: 1rem;
 }
 .block {
+  display: flex;
+  flex-direction: row;
   padding-bottom: 20px;
 }
 .blockTitle {
@@ -110,6 +112,11 @@ figure figcaption {
   display: block;
   width: 100%;
   margin-bottom: 10px;
+}
+.blockPreview {
+  display: block;
+  height: 3rem;
+  margin-left: 1rem;
 }
 
 @media (min-width: 1300px) {
