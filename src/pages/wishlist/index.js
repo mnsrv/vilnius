@@ -4,24 +4,26 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import Block from '../../components/Block'
 
-export default ({ data }) => (
-  <Layout title="Штуки">
-    <div className="blocks">
-      {data.allWishlistJson.edges.map(({ node }) => (
-        <Block
-          key={node.id}
-          title={`${node.title} – $${node.price}`}
-          subtitle={node.brand}
-          preview={node.image.publicURL}
-        />
-      ))}
-    </div>
-  </Layout>
-)
-
+export default ({ data }) => {
+  console.log(data)
+  return (
+    <Layout title="Штуки">
+      <div className="blocks">
+        {data.allWishlistJson.edges.map(({ node }) => (
+          <Block
+            key={node.id}
+            title={`${node.title} – $${node.price}`}
+            subtitle={node.brand}
+            preview={node.image.publicURL}
+          />
+        ))}
+      </div>
+    </Layout>
+  )
+}
 export const query = graphql`
   query {
-    allWishlistJson {
+    allWishlistJson(sort: { fields: date, order: DESC }) {
       edges {
         node {
           id
