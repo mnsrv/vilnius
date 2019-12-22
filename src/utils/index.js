@@ -5,12 +5,6 @@ export function getRating(ratingFloat) {
   }
   return ''
 }
-export function getBookAuthor(authors) {
-  if (authors && authors.length > 0) {
-    return authors[0].name
-  }
-  return ''
-}
 export function getBookImageUrl(url) {
   return url.replace('._SX98_', '')
 }

@@ -22,15 +22,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`
+        name: 'books',
+        path: `${__dirname}/src/pages/books`
       }
     },
     {
-      resolve: '@jamesdanylik/gatsby-source-goodreads',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        key: process.env.GOODREADS_KEY,
-        id: '74776573'
+        name: 'images',
+        path: `${__dirname}/src/images`
       }
     },
     {
