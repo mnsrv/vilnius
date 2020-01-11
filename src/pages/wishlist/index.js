@@ -15,6 +15,8 @@ export default ({ data }) => {
             title={`${node.title} – $${node.price}`}
             subtitle={node.brand}
             preview={node.image.publicURL}
+            done={node.done}
+            style={node.done ? { opacity: 0.5, color: 'gray' } : {}}
           />
         ))}
       </div>
@@ -33,6 +35,7 @@ export const query = graphql`
           title
           brand
           price
+          done
           date(formatString: "DD.MM.YYYY")
         }
       }

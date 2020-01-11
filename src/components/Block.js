@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 export default class Block extends PureComponent {
   render() {
     return (
-      <div className="block">
+      <div className="block" style={this.props.style}>
         <div>
           {this.renderImage()}
           {this.renderTitle()}
@@ -44,9 +44,16 @@ export default class Block extends PureComponent {
   }
 
   renderUrl = () => {
-    const { rating, title, url } = this.props
+    const { rating, title, url, done } = this.props
 
     if (!url) {
+      if (done) {
+        return (
+          <s>
+            {title} {rating}
+          </s>
+        )
+      }
       return (
         <span>
           {title} {rating}

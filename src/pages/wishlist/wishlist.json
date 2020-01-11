@@ -23,7 +23,7 @@
     "date": "2019-11-12",
     "image": "images/popsocket.png",
     "price": 10,
-    "done": false
+    "done": true
   },
   {
     "title": "Launchkey Mini MK3",
