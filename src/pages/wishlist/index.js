@@ -12,10 +12,11 @@ export default ({ data }) => {
         {data.allWishlistJson.edges.map(({ node }) => (
           <Block
             key={node.id}
-            title={`${node.title} – $${node.price}`}
+            title={node.title}
             subtitle={node.brand}
             preview={node.image.publicURL}
             done={node.done}
+            year={`$${node.price}`}
             style={node.done ? { opacity: 0.5, color: 'gray' } : {}}
           />
         ))}
@@ -25,7 +26,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-    allWishlistJson(sort: { fields: date, order: DESC }) {
+    allWishlistJson(sort: { fields: [done, date], order: [ASC, DESC] }) {
       edges {
         node {
           id

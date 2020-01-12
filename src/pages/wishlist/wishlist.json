@@ -5,7 +5,7 @@
     "date": "2019-12-22",
     "image": "images/apple-magic-keyboard.png",
     "price": 99,
-    "done": false,
+    "done": true,
     "url": "https://www.apple.com/shop/product/MLA22LL/A/magic-keyboard-us-english"
   },
   {
@@ -31,6 +31,6 @@
     "date": "2019-12-01",
     "image": "images/novation-launchkey-mini-mk3.png",
     "price": 99,
-    "done": false
+    "done": true
   }
 ]
