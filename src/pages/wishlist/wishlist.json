@@ -4,7 +4,7 @@
     "brand": "Apple",
     "date": "2019-12-22",
     "image": "images/apple-magic-keyboard.png",
-    "price": 99,
+    "price": 100,
     "done": true,
     "url": "https://www.apple.com/shop/product/MLA22LL/A/magic-keyboard-us-english"
   },
@@ -13,7 +13,7 @@
     "brand": "Logitech",
     "date": "2019-12-22",
     "image": "images/logitech-mx-master-3.png",
-    "price": 99,
+    "price": 100,
     "done": false,
     "url": "https://www.amazon.com/Logitech-Master-Advanced-Wireless-Mouse/dp/B07S395RWD"
   },
@@ -30,7 +30,7 @@
     "brand": "Novation",
     "date": "2019-12-01",
     "image": "images/novation-launchkey-mini-mk3.png",
-    "price": 99,
+    "price": 100,
     "done": true
   }
 ]
