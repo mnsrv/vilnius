@@ -1,5 +1,14 @@
 [
   {
+    "title": "Laptop Stand",
+    "brand": "The Roost",
+    "date": "2020-06-02",
+    "image": "images/roost-laptop-stand.png",
+    "price": 90,
+    "done": false,
+    "url": ""
+  },
+  {
     "title": "Mi Router 4",
     "brand": "Xiaomi",
     "date": "2020-05-10",
