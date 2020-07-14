@@ -2,43 +2,44 @@
   {
     "title": "Laptop Stand",
     "brand": "The Roost",
-    "date": "2020-06-02",
+    "createdAt": "2020-06-02",
+    "updatedAt": "2020-07-14",
     "image": "images/roost-laptop-stand.png",
     "price": 90,
-    "done": false,
-    "url": ""
+    "done": true
   },
   {
     "title": "Mi Router 4",
     "brand": "Xiaomi",
-    "date": "2020-05-10",
+    "createdAt": "2020-05-10",
+    "updatedAt": "2020-05-12",
     "image": "images/xiaomi-mi-router-4.png",
     "price": 40,
-    "done": true,
-    "url": "https://www.therooststand.com"
+    "done": true
   },
   {
     "title": "Magic Keyboard",
     "brand": "Apple",
-    "date": "2019-12-22",
+    "createdAt": "2019-12-22",
+    "updatedAt": "2020-01-12",
     "image": "images/apple-magic-keyboard.png",
     "price": 100,
-    "done": true,
-    "url": "https://www.apple.com/shop/product/MLA22LL/A/magic-keyboard-us-english"
+    "done": true
   },
   {
     "title": "MX Master 3",
     "brand": "Logitech",
-    "date": "2019-12-22",
+    "createdAt": "2019-12-22",
+    "updatedAt": "2020-07-14",
     "image": "images/logitech-mx-master-3.png",
     "price": 100,
-    "done": false,
-    "url": "https://www.amazon.com/Logitech-Master-Advanced-Wireless-Mouse/dp/B07S395RWD"
+    "done": true
   },
   {
     "title": "PopGrip",
     "brand": "PopSockets",
-    "date": "2019-11-12",
+    "createdAt": "2019-11-12",
+    "updatedAt": "2020-01-11",
     "image": "images/popsocket.png",
     "price": 10,
     "done": true
@@ -46,7 +47,8 @@
   {
     "title": "Launchkey Mini MK3",
     "brand": "Novation",
-    "date": "2019-12-01",
+    "createdAt": "2019-12-01",
+    "updatedAt": "2020-01-12",
     "image": "images/novation-launchkey-mini-mk3.png",
     "price": 100,
     "done": true

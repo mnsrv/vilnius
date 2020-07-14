@@ -19,19 +19,5 @@ export const query = graphql`
         mapboxToken
       }
     }
-    allWishlistJson {
-      edges {
-        node {
-          id
-          image {
-            publicURL
-          }
-          title
-          brand
-          price
-          date(formatString: "DD.MM.YYYY")
-        }
-      }
-    }
   }
 `

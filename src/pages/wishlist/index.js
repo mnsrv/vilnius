@@ -5,7 +5,6 @@ import Layout from '../../components/Layout'
 import Block from '../../components/Block'
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout title="Штуки">
       <div className="blocks">
@@ -26,7 +25,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-    allWishlistJson(sort: { fields: [done, date], order: [ASC, DESC] }) {
+    allWishlistJson(sort: { fields: [done, updatedAt], order: [ASC, DESC] }) {
       edges {
         node {
           id
@@ -37,7 +36,7 @@ export const query = graphql`
           brand
           price
           done
-          date(formatString: "DD.MM.YYYY")
+          updatedAt(formatString: "DD.MM.YYYY")
         }
       }
     }
