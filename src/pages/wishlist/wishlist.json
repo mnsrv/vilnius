@@ -1,5 +1,14 @@
 [
   {
+    "title": "Compact",
+    "brand": "Victorinox",
+    "createdAt": "2020-06-28",
+    "updatedAt": "2020-06-28",
+    "image": "images/victorinox-compact.png",
+    "price": 30,
+    "done": false
+  },
+  {
     "title": "Laptop Stand",
     "brand": "The Roost",
     "createdAt": "2020-06-02",
