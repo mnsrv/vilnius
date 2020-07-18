@@ -44,27 +44,15 @@ export default class Block extends PureComponent {
   }
 
   renderUrl = () => {
-    const { rating, title, url, done } = this.props
+    const { title, url, done } = this.props
 
     if (!url) {
       if (done) {
-        return (
-          <s>
-            {title} {rating}
-          </s>
-        )
+        return <s>{title}</s>
       }
-      return (
-        <span>
-          {title} {rating}
-        </span>
-      )
+      return <span>{title}</span>
     }
-    return (
-      <Link to={url}>
-        {title} {rating}
-      </Link>
-    )
+    return <Link to={url}>{title}</Link>
   }
 
   renderYear = () => {

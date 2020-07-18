@@ -15,8 +15,7 @@ export default class BooksPage extends PureComponent {
           {data.allBooksJson.edges.map(({ node }) => (
             <Block
               key={node.id}
-              rating={getRating(node.rating)}
-              title={node.title}
+              title={`${node.title} ${getRating(node.rating)}`}
               subtitle={node.author}
             />
           ))}
