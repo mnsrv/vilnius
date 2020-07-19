@@ -5,8 +5,8 @@ const menu = [
   { title: 'home', url: '/' },
   { title: 'blog', url: '/blog/' },
   { title: 'books', url: '/books/' },
+  { title: 'wishlist', url: '/wishlist/' },
   { title: 'travel', url: '/travel/' },
-  { title: 'wishlist', url: '/wishlist/' }
 ]
 
 export default () => (
