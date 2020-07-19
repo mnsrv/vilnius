@@ -35,10 +35,16 @@ export default class Block extends PureComponent {
   }
 
   renderTitle = () => {
+    const url = this.renderUrl()
+    const year = this.renderYear()
+
+    if (!url && !year) {
+      return null
+    }
     return (
       <h4 className="blockTitle">
-        {this.renderUrl()}
-        {this.renderYear()}
+        {url}
+        {year}
       </h4>
     )
   }
@@ -46,13 +52,16 @@ export default class Block extends PureComponent {
   renderUrl = () => {
     const { title, url, done } = this.props
 
-    if (!url) {
-      if (done) {
-        return <s>{title}</s>
-      }
-      return <span>{title}</span>
+    if (!title) {
+      return null
     }
-    return <Link to={url}>{title}</Link>
+    if (url) {
+      return <Link to={url}>{title}</Link>
+    }
+    if (done) {
+      return <s>{title}</s>
+    }
+    return <span>{title}</span>
   }
 
   renderYear = () => {
