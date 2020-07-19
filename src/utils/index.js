@@ -1,7 +1,7 @@
 export function getRating(ratingFloat) {
   const rating = Number(ratingFloat)
-  if (rating > 3) {
-    return '★'
+  if (rating > 4) {
+    return '⭐️'
   }
   return ''
 }
@@ -21,7 +21,7 @@ export function formatDate(date) {
     'Сентябрь',
     'Октябрь',
     'Ноябрь',
-    'Декабрь'
+    'Декабрь',
   ]
   var monthIndex = date.getMonth()
   var year = date.getFullYear()

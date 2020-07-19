@@ -12,13 +12,24 @@ export default class BooksPage extends PureComponent {
     return (
       <Layout title="Книги">
         <div className="blocks">
-          {data.allBooksJson.edges.map(({ node }) => (
-            <Block
-              key={node.id}
-              title={`${node.title} ${getRating(node.rating)}`}
-              subtitle={node.author}
-            />
-          ))}
+          {data.allBooksJson.group
+            .sort(
+              (a, b) =>
+                Number(b.fieldValue.slice(0, 4)) -
+                Number(a.fieldValue.slice(0, 4))
+            )
+            .map(({ fieldValue, totalCount, nodes }) => (
+              <>
+                <h2>{fieldValue}</h2>
+                {nodes.map((node) => (
+                  <Block
+                    key={node.id}
+                    title={`${getRating(node.rating)} ${node.title}`}
+                    subtitle={node.author}
+                  />
+                ))}
+              </>
+            ))}
         </div>
       </Layout>
     )
@@ -28,8 +39,9 @@ export default class BooksPage extends PureComponent {
 export const query = graphql`
   query {
     allBooksJson(sort: { fields: date, order: DESC }) {
-      edges {
-        node {
+      group(field: year) {
+        fieldValue
+        nodes {
           id
           title
           rating

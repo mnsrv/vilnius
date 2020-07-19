@@ -36,10 +36,10 @@ export default class Block extends PureComponent {
 
   renderTitle = () => {
     return (
-      <h3 className="blockTitle">
+      <h4 className="blockTitle">
         {this.renderUrl()}
         {this.renderYear()}
-      </h3>
+      </h4>
     )
   }
 
