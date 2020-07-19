@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Fragment, PureComponent } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
@@ -19,7 +19,7 @@ export default class BooksPage extends PureComponent {
                 Number(a.fieldValue.slice(0, 4))
             )
             .map(({ fieldValue, totalCount, nodes }) => (
-              <>
+              <Fragment key={fieldValue}>
                 <h2>{fieldValue}</h2>
                 {nodes.map((node) => (
                   <Block
@@ -28,7 +28,7 @@ export default class BooksPage extends PureComponent {
                     subtitle={node.author}
                   />
                 ))}
-              </>
+              </Fragment>
             ))}
         </div>
       </Layout>
