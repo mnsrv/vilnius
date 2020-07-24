@@ -2,36 +2,36 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    mapboxToken: process.env.MAPBOX_TOKEN
+    mapboxToken: process.env.MAPBOX_TOKEN,
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'blog',
-        path: `${__dirname}/src/pages/blog`
-      }
+        path: `${__dirname}/src/pages/blog`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'wishlist',
-        path: `${__dirname}/src/pages/wishlist`
-      }
+        path: `${__dirname}/src/pages/wishlist`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'books',
-        path: `${__dirname}/src/pages/books`
-      }
+        path: `${__dirname}/src/pages/books`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: 'gatsby-plugin-ackee-tracker',
@@ -43,8 +43,8 @@ module.exports = {
         // Disabled analytic tracking when running localy
         ignoreLocalhost: true,
         // If enabled it will collect info on OS, BrowserInfo, Device  & ScreenSize
-        detailed: true
-      }
+        detailed: true,
+      },
     },
     'gatsby-plugin-dark-mode',
     'gatsby-plugin-react-helmet',
@@ -61,22 +61,23 @@ module.exports = {
               maxWidth: 960,
               linkImagesToOriginal: false,
               showCaptions: true,
-              wrapperStyle: fluidResult => {
+              wrapperStyle: (fluidResult) => {
                 if (fluidResult.aspectRatio < 1) {
                   return 'max-width: 480px !important; width: 50%;'
                 }
                 return ''
-              }
-            }
+              },
+            },
           },
           {
-            resolve: 'gatsby-remark-external-links'
-          }
-        ]
-      }
+            resolve: 'gatsby-remark-external-links',
+          },
+        ],
+      },
     },
     'gatsby-transformer-json',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-styled-components'
-  ]
+    'gatsby-plugin-styled-components',
+  ],
 }

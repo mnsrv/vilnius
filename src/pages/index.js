@@ -10,7 +10,10 @@ export default class IndexPage extends PureComponent {
 
     return (
       <Layout title="mansurov.me">
-        <Block imageUrl={data.file.publicURL} subtitle="Winter in Yakutsk" />
+        <Block
+          fluid={data.file.childImageSharp.fluid}
+          subtitle="Winter in Yakutsk"
+        />
       </Layout>
     )
   }
@@ -19,7 +22,12 @@ export default class IndexPage extends PureComponent {
 export const query = graphql`
   query {
     file(relativePath: { eq: "home.jpg" }) {
-      publicURL
+      childImageSharp {
+        fluid(maxWidth: 960) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluidLimitPresentationSize
+        }
+      }
     }
   }
 `

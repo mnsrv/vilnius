@@ -1,17 +1,20 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 
 export default class Block extends PureComponent {
   render() {
     return (
       <div className="block" style={this.props.style}>
-        <div>
-          {this.renderImage()}
-          {this.renderTitle()}
-          {this.renderSubtitle()}
-          {this.renderText()}
+        {this.renderImage()}
+        <div className="blockRow">
+          <div>
+            {this.renderTitle()}
+            {this.renderSubtitle()}
+            {this.renderText()}
+          </div>
+          {this.renderPreview()}
         </div>
-        {this.renderPreview()}
       </div>
     )
   }
@@ -26,12 +29,32 @@ export default class Block extends PureComponent {
   }
 
   renderImage = () => {
-    const { title, imageUrl } = this.props
+    const { subtitle, imageUrl, fixed, fluid } = this.props
 
-    if (!imageUrl) {
-      return null
+    if (fixed) {
+      return (
+        <Img
+          fixed={fixed}
+          title={subtitle}
+          alt={subtitle}
+          className="blockImage"
+        />
+      )
     }
-    return <img src={imageUrl} alt={title} className="blockImage" />
+    if (fluid) {
+      return (
+        <Img
+          fluid={fluid}
+          title={subtitle}
+          alt={subtitle}
+          className="blockImage"
+        />
+      )
+    }
+    if (imageUrl) {
+      return <img src={imageUrl} alt={subtitle} className="blockImage" />
+    }
+    return null
   }
 
   renderTitle = () => {
