@@ -79,6 +79,12 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-no-javascript', // <-- Here is the plugin, make sure it is included last in the plugins array.
+    {
+      // <-- Here is the plugin, make sure it is included last in the plugins array.
+      resolve: 'gatsby-plugin-no-javascript',
+      options: {
+        excludePaths: /\/travel/,
+      },
+    },
   ],
 }

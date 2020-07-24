@@ -28,7 +28,7 @@ export default class Block extends PureComponent {
           fixed={fixedPreview}
           title={title}
           alt={title}
-          loading="eager"
+          fadeIn={false}
           className="blockPreview"
         />
       )
@@ -39,7 +39,7 @@ export default class Block extends PureComponent {
           fluid={fluidPreview}
           title={title}
           alt={title}
-          loading="eager"
+          fadeIn={false}
           className="blockPreview"
         />
       )
@@ -59,7 +59,7 @@ export default class Block extends PureComponent {
           fixed={fixed}
           title={subtitle}
           alt={subtitle}
-          loading="eager"
+          fadeIn={false}
           className="blockImage"
         />
       )
@@ -70,7 +70,7 @@ export default class Block extends PureComponent {
           fluid={fluid}
           title={subtitle}
           alt={subtitle}
-          loading="eager"
+          fadeIn={false}
           className="blockImage"
         />
       )
