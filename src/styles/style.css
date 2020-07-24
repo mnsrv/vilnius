@@ -103,6 +103,7 @@ figure {
 figure figcaption {
   font-size: smaller;
   font-style: italic;
+  margin-top: 0.5rem;
 }
 @media (max-width: 899px) {
   .container {
@@ -131,7 +132,6 @@ figure figcaption {
   color: var(--small);
 }
 .blockSubtitle {
-  margin-top: 0.25rem;
   display: block;
 }
 .blockImage {
