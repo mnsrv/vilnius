@@ -20,12 +20,32 @@ export default class Block extends PureComponent {
   }
 
   renderPreview = () => {
-    const { title, preview } = this.props
+    const { title, preview, fixedPreview, fluidPreview } = this.props
 
-    if (!preview) {
-      return null
+    if (fixedPreview) {
+      return (
+        <Img
+          fixed={fixedPreview}
+          title={title}
+          alt={title}
+          className="blockPreview"
+        />
+      )
     }
-    return <img src={preview} alt={title} className="blockPreview" />
+    if (fluidPreview) {
+      return (
+        <Img
+          fluid={fluidPreview}
+          title={title}
+          alt={title}
+          className="blockPreview"
+        />
+      )
+    }
+    if (preview) {
+      return <img src={preview} alt={title} className="blockPreview" />
+    }
+    return null
   }
 
   renderImage = () => {

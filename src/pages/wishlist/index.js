@@ -13,7 +13,7 @@ export default ({ data }) => {
             key={node.id}
             title={node.title}
             subtitle={node.brand}
-            preview={node.image.publicURL}
+            fixedPreview={node.image.childImageSharp.fixed}
             done={node.done}
             year={`$${node.price}`}
             style={node.done ? { opacity: 0.5, color: 'gray' } : {}}
@@ -30,7 +30,11 @@ export const query = graphql`
         node {
           id
           image {
-            publicURL
+            childImageSharp {
+              fixed(height: 54, quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
           title
           brand

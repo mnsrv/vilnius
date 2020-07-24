@@ -23,9 +23,8 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "home.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 960) {
+        fluid(maxWidth: 960, quality: 100) {
           ...GatsbyImageSharpFluid
-          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }
