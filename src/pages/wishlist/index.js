@@ -32,7 +32,7 @@ export const query = graphql`
           image {
             childImageSharp {
               fixed(height: 54, quality: 100) {
-                ...GatsbyImageSharpFixed
+                ...GatsbyImageSharpFixed_withWebp
               }
             }
           }
