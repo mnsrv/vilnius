@@ -1,11 +1,11 @@
 [
   {
-    "title": "A-1",
-    "brand": "Canon",
+    "title": "OM-10",
+    "brand": "Olympus",
     "createdAt": "2020-07-21",
-    "updatedAt": "2020-07-21",
-    "image": "images/canon-a-1.png",
-    "price": 100,
+    "updatedAt": "2020-08-04",
+    "image": "images/olympus-om-10.png",
+    "price": 60,
     "done": false
   },
   {
