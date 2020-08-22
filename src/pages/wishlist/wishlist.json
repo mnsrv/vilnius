@@ -3,10 +3,10 @@
     "title": "OM-10",
     "brand": "Olympus",
     "createdAt": "2020-07-21",
-    "updatedAt": "2020-08-04",
+    "updatedAt": "2020-08-22",
     "image": "images/olympus-om-10.png",
     "price": 60,
-    "done": false
+    "done": true
   },
   {
     "title": "Compact",
