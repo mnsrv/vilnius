@@ -9,13 +9,13 @@
     "done": true
   },
   {
-    "title": "Compact",
+    "title": "Spartan",
     "brand": "Victorinox",
     "createdAt": "2020-06-28",
-    "updatedAt": "2020-06-28",
-    "image": "images/victorinox-compact.png",
-    "price": 30,
-    "done": false
+    "updatedAt": "2020-08-26",
+    "image": "images/victorinox-spartan.png",
+    "price": 20,
+    "done": true
   },
   {
     "title": "Laptop Stand",
